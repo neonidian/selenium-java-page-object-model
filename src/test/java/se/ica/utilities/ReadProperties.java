@@ -4,13 +4,13 @@ import java.util.ResourceBundle;
 
 public class ReadProperties {
 
-    ResourceBundle resourceBundle;
+    public static ResourceBundle resourceBundle;
 
     public ReadProperties() {
-        resourceBundle = ResourceBundle.getBundle("selenium.properties");
+        resourceBundle = ResourceBundle.getBundle("selenium");
     }
 
-    public ResourceBundle getSeleniumProperties () {
+    public static ResourceBundle getSeleniumProperties () {
         return resourceBundle;
     }
 }

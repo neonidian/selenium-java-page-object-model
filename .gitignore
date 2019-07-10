@@ -6,3 +6,9 @@ build
 
 # IntelliJ
 .idea/
+
+# Project exclude paths
+/out/
+/out/production/classes/
+/out/test/classes/
+resources/drivers/

@@ -5,7 +5,7 @@ import se.ica.framework.SeleniumActions;
 
 public class PageBase {
 
-    HomePage homePage;
+    public HomePage homePage;
     WebDriver webDriver;
     SeleniumActions seleniumActions;
 

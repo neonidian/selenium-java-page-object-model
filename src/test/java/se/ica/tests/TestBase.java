@@ -10,14 +10,14 @@ import se.ica.utilities.ReadProperties;
 public class TestBase {
 
     PageBase page;
-    ReadProperties readProperties;
-    BrowserFactory browserFactory;
+    static ReadProperties readProperties;
+    static BrowserFactory browserFactory;
     WebDriver webDriver;
 
     @BeforeAll
-    public void intializeSetup() {
+    public static void intializeSetup() {
         readProperties= new ReadProperties();
-        browserFactory = new BrowserFactory(readProperties.getSeleniumProperties());
+        browserFactory = new BrowserFactory(readProperties.getSeleniumProperties().getString("browser"));
     }
 
     @BeforeEach
