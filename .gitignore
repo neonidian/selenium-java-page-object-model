@@ -9,6 +9,4 @@ build
 
 # Project exclude paths
 /out/
-/out/production/classes/
-/out/test/classes/
 src/test/resources/drivers/
