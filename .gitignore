@@ -11,4 +11,4 @@ build
 /out/
 /out/production/classes/
 /out/test/classes/
-resources/drivers/
+src/test/resources/drivers/
