@@ -9,10 +9,10 @@ import se.ica.utilities.ReadProperties;
 
 public class TestBase {
 
-    PageBase page;
-    static ReadProperties readProperties;
-    static BrowserFactory browserFactory;
+    PageBase pageBase;
     WebDriver webDriver;
+    static BrowserFactory browserFactory;
+    static ReadProperties readProperties;
 
     @BeforeAll
     public static void intializeSetup() {
@@ -23,7 +23,8 @@ public class TestBase {
     @BeforeEach
     public void initalizeTest() {
         webDriver = browserFactory.initializeBrowser();
-        page = new PageBase();
-        page.setWebDriver(webDriver);
+        pageBase = new PageBase();
+        pageBase.initializePages();
+        pageBase.setWebDriver(webDriver);
     }
 }

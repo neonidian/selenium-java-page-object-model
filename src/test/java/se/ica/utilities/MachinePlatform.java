@@ -18,7 +18,7 @@ public class MachinePlatform {
         }
         else {
             try {
-                throw new Exception("Platform not yet supported - " + platformFromJava);
+                throw new Exception("********* Platform not yet supported - " + platformFromJava);
             } catch (Exception e) {
                 e.printStackTrace();
             }
