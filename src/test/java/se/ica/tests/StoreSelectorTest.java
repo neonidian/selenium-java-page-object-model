@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class StoreSelectorTest extends TestBase {
 
     @Test public void testSomeLibraryMethod() {
-        pageBase.getHomePage()
+        homePage
                 .openURL(readProperties.getSeleniumProperties().getString("applicationBaseURL"))
                 .clickOnHandlaOnlineLink();
     }
