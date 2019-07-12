@@ -6,15 +6,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import se.ica.framework.BrowserFactory;
 import se.ica.pages.HomePage;
-import se.ica.pages.PageBase;
 import se.ica.utilities.ReadProperties;
 
 public class TestBase {
 
-    HomePage homePage;
     WebDriver webDriver;
     static BrowserFactory browserFactory;
     static ReadProperties readProperties;
+
+    HomePage homePage;
 
     @BeforeAll
     public static void beforeAllTests() {
