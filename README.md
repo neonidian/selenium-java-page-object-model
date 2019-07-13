@@ -7,8 +7,9 @@ in their respective packages
 
 * Gradle is used as the build tool
 
-* To run the tests, use `./gradlew`(for Linux and Mac) or `gradlew`(for Windows) in the command line and the test report is generated in 
-build/reports/tests/test/index.html
+* To run the tests, use `./gradlew`(for Linux and Mac) or `gradlew`(for Windows) in the command line 
+
+* Test report is generated in build/reports/tests/test/index.html
 
 ## Java Compatability
 
