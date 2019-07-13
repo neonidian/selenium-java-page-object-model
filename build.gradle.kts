@@ -1,4 +1,4 @@
-defaultTasks("test")
+defaultTasks("clean", "test")
 
 plugins {
     `java-library`
