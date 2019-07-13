@@ -3,6 +3,7 @@ import java.nio.charset.StandardCharsets.UTF_8
 plugins {
     `java-library`
 }
+
 defaultTasks("clean", "test")
 
 repositories {
