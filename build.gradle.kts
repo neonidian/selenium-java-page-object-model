@@ -1,8 +1,9 @@
-defaultTasks("clean", "test")
+import java.nio.charset.StandardCharsets.UTF_8
 
 plugins {
     `java-library`
 }
+defaultTasks("clean", "test")
 
 repositories {
     jcenter()
@@ -25,5 +26,9 @@ tasks.test {
     testLogging {
         events("passed", "skipped", "failed")
     }
+}
+
+tasks.withType(JavaCompile::class) {
+    options.encoding = UTF_8.displayName()
 }
 
