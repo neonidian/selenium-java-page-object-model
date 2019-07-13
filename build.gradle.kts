@@ -8,11 +8,6 @@ repositories {
     jcenter()
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-}
-
 dependencies {
     api("org.apache.commons:commons-math3:3.6.1")
     implementation("com.google.guava:guava:27.0.1-jre")
