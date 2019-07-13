@@ -6,7 +6,7 @@ import se.ica.utilities.LocatorObject;
 
 public class HomePage extends PageBase {
 
-    LocatorObject locHandlaOnlineLink = new LocatorObject("//h2[text()=\"Handla online\"]", LocatorObject.XPATH, "Home page > 'HANDLA ONLINE' Link");
+    LocatorObject locatorHandlaOnlineLink = new LocatorObject("//h2[text()=\"Handla online\"]", LocatorObject.XPATH, "Home page > 'HANDLA ONLINE' Link");
 
     public HomePage(WebDriver webDriver) {
         seleniumActions = new SeleniumActions((webDriver));
@@ -18,7 +18,7 @@ public class HomePage extends PageBase {
     }
 
     public HomePage clickOnHandlaOnlineLink() {
-        seleniumActions.click(locHandlaOnlineLink);
+        seleniumActions.click(locatorHandlaOnlineLink);
         return this;
     }
 }

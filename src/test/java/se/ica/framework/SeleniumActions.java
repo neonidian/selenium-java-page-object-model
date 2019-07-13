@@ -5,6 +5,9 @@ import se.ica.utilities.LocatorObject;
 
 import java.util.concurrent.TimeUnit;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+
 public class SeleniumActions {
 
     private WebDriver webDriver;
@@ -22,5 +25,9 @@ public class SeleniumActions {
 
     public void openURL(String applicationURL) {
         webDriver.get(applicationURL);
+    }
+
+    public void assertTextPresentInElement(LocatorObject locatorHandlaPageHeaderLabel, String expectedText) {
+        assertThat(webDriver.findElement(locatorHandlaPageHeaderLabel.elementValue).getText(), is(expectedText));
     }
 }

@@ -2,11 +2,13 @@ package se.ica.tests;
 
 import org.junit.jupiter.api.Test;
 
-public class StoreSelectorTest extends TestBase {
+public class OnlinePageTest extends TestBase {
 
-    @Test public void testSomeLibraryMethod() { 
+    @Test public void testHandlaPageIsLoaded() {
         homePage
                 .openURL(readProperties.getSeleniumProperties().getString("applicationBaseURL"))
                 .clickOnHandlaOnlineLink();
+        handlaPage
+                .verifyHandlaPageDisplayed();
     }
 }

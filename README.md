@@ -25,5 +25,9 @@ in src/test and there is no src/main
 
 * The package `se.ica.tests` has the tests
 
+* Note that the assertions are located in a [class](src/test/java/se/ica/framework/SeleniumActions.java) 
+which is not the [tests](src/test/java/se/ica/tests/OnlinePageTest.java) -> something  different from the usual convention
+
 ## Website Used
+
 * This project uses https://www.ica.se, a Swedish retail company that provides online and store shopping

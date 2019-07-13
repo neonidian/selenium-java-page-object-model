@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import se.ica.framework.BrowserFactory;
+import se.ica.pages.HandlaPage;
 import se.ica.pages.HomePage;
 import se.ica.utilities.ReadProperties;
 
@@ -15,6 +16,7 @@ public class TestBase {
     static ReadProperties readProperties;
 
     HomePage homePage;
+    HandlaPage handlaPage;
 
     @BeforeAll
     public static void beforeAllTests() {
@@ -35,5 +37,6 @@ public class TestBase {
 
     private void initializePages(WebDriver webDriver) {
         homePage = new HomePage(webDriver);
+        handlaPage = new HandlaPage(webDriver);
     }
 }
