@@ -1,5 +1,3 @@
-import java.nio.charset.StandardCharsets.UTF_8
-
 plugins {
     `java-library`
 }
@@ -28,8 +26,3 @@ tasks.test {
         events("passed", "skipped", "failed")
     }
 }
-
-tasks.withType(JavaCompile::class) {
-    options.encoding = UTF_8.displayName()
-}
-
