@@ -17,11 +17,7 @@ public class MachinePlatform {
             platform = Platform.MAC;
         }
         else {
-            try {
-                throw new Exception("********* Platform not yet supported - " + platformFromJava);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            throw new RuntimeException("********* Platform not yet supported - " + platformFromJava);
         }
         return platform;
     }
