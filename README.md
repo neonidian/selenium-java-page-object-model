@@ -3,11 +3,13 @@
 Selenium project uses page object modelling where tests, pages(with HTML elements defined) and selenium framework reside
 in their respective packages
 
-## Build Tool
+## Running the tests
 
-* Gradle is used as the build tool
+* [Gradle](https://gradle.org/) is used as the build tool
 
-* To run the tests, use `./gradlew`(for Linux and Mac) or `gradlew`(for Windows) in the command line 
+* Pre-requisite: Gradle, Java and firefox browser installed (Other browsers can also be configured)
+
+* To run the tests, open a command line and go to the project directory. Use `./gradlew`(for Linux and Mac) or `gradlew`(for Windows) in the command line 
 
 * Test report is generated in build/reports/tests/test/index.html
 
