@@ -6,7 +6,7 @@ import se.ica.utilities.LocatorObject;
 
 public class HandlaPage extends PageBase {
 
-    LocatorObject locatorHandlaPageHeaderLabel = new LocatorObject("//header//div/h2", LocatorObject.XPATH, "Handla page > Header label");
+    LocatorObject locatorHandlaPageHeaderLabel = new LocatorObject("//header//div/h3[contains(@class,'store-selector')]", LocatorObject.XPATH, "Handla page > Store selector header label");
 
     public HandlaPage(WebDriver webDriver) {
         seleniumActions = new SeleniumActions((webDriver));
