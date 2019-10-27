@@ -23,5 +23,5 @@ tasks.test {
 }
 
 tasks.wrapper {
-    gradleVersion = "5.6.2"
+    gradleVersion = "5.6.3"
 }
