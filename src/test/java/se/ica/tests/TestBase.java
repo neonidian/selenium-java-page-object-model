@@ -7,21 +7,21 @@ import org.openqa.selenium.WebDriver;
 import se.ica.framework.BrowserFactory;
 import se.ica.pages.HandlaPage;
 import se.ica.pages.HomePage;
+import se.ica.pages.StoreSelectorPage;
 import se.ica.utilities.ReadProperties;
 
 public class TestBase {
 
-    WebDriver webDriver;
-    static BrowserFactory browserFactory;
-    static ReadProperties readProperties;
+    private WebDriver webDriver;
+    private static BrowserFactory browserFactory;
 
     HomePage homePage;
     HandlaPage handlaPage;
+    StoreSelectorPage storeSelectorPage;
 
     @BeforeAll
     public static void beforeAllTests() {
-        readProperties= new ReadProperties();
-        browserFactory = new BrowserFactory(readProperties.getSeleniumProperties().getString("browser"));
+        browserFactory = new BrowserFactory(ReadProperties.getSeleniumProperties().getString("browser"));
     }
 
     @BeforeEach
@@ -38,5 +38,6 @@ public class TestBase {
     private void initializePages(WebDriver webDriver) {
         homePage = new HomePage(webDriver);
         handlaPage = new HandlaPage(webDriver);
+        storeSelectorPage = new StoreSelectorPage(webDriver);
     }
 }

@@ -6,19 +6,20 @@ import se.ica.utilities.LocatorObject;
 
 public class HomePage extends PageBase {
 
-    LocatorObject locatorHandlaOnlineLink = new LocatorObject("//h2[text()=\"Handla online\"]", LocatorObject.XPATH, "Home page > 'HANDLA ONLINE' Link");
+    private LocatorObject locatorHandlaOnlineLink = new LocatorObject("//h2[text()=\"Handla online\"]", LocatorObject.XPATH, "Home page > 'HANDLA ONLINE' Link");
+
+    private static final String HOME_PAGE_URL = "https://www.ica.se";
 
     public HomePage(WebDriver webDriver) {
         seleniumActions = new SeleniumActions((webDriver));
     }
 
-    public HomePage openURL(String applicationURL) {
-        seleniumActions.openURL(applicationURL);
+    public HomePage openHomePageByURL() {
+        seleniumActions.openURL(HOME_PAGE_URL);
         return this;
     }
 
-    public HomePage clickOnHandlaOnlineLink() {
+    public void clickOnHandlaOnlineLink() {
         seleniumActions.click(locatorHandlaOnlineLink);
-        return this;
     }
 }

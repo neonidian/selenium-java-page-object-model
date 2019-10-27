@@ -2,13 +2,24 @@ package se.ica.tests;
 
 import org.junit.jupiter.api.Test;
 
-public class OnlinePageTest extends TestBase {
+class OnlinePageTest extends TestBase {
 
-    @Test public void testHandlaPageIsLoaded() {
+    @Test
+    void shouldNavigateToHandlaHomePage() {
         homePage
-                .openURL(readProperties.getSeleniumProperties().getString("applicationBaseURL"))
+                .openHomePageByURL()
                 .clickOnHandlaOnlineLink();
         handlaPage
                 .verifyHandlaPageDisplayed();
+    }
+
+    @Test
+    void shouldDisplayStorePopupModalWhenSearchingByZipCode() {
+        String ZIP_CODE = "11124";
+        handlaPage
+                .openHandlaPageByURL()
+                .enterZipCode(ZIP_CODE);
+        storeSelectorPage
+                .verifyStoreSelectorModalDisplayed();
     }
 }
