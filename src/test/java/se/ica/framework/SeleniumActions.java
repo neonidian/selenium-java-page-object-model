@@ -19,15 +19,23 @@ public class SeleniumActions {
         this.webDriver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
     }
 
-    public void click(LocatorObject locHandlaOnlineLink) {
-        webDriver.findElement(locHandlaOnlineLink.elementValue).click();
+    public void click(LocatorObject locatorObjectToClick) {
+        webDriver.findElement(locatorObjectToClick.elementValue).click();
     }
 
     public void openURL(String applicationURL) {
         webDriver.get(applicationURL);
     }
 
-    public void assertTextPresentInElement(LocatorObject locatorHandlaPageHeaderLabel, String expectedText) {
-        assertThat(webDriver.findElement(locatorHandlaPageHeaderLabel.elementValue).getText(), is(expectedText));
+    public void enterTextInTextBox(LocatorObject locatorTextBox, String textToEnter) {
+        webDriver.findElement(locatorTextBox.elementValue).sendKeys(textToEnter);
+    }
+
+    public void assertTextPresentInElement(LocatorObject locatorObject, String expectedText) {
+        assertThat(webDriver.findElement(locatorObject.elementValue).getText(), is(expectedText));
+    }
+
+    public void assertElementIsDisplayed(LocatorObject locatorObject) {
+        assertThat(webDriver.findElement(locatorObject.elementValue).isDisplayed(), is(true));
     }
 }
