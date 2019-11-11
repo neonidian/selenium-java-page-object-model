@@ -15,13 +15,19 @@ dependencies {
     testImplementation("org.hamcrest:hamcrest-all:1.3")
 }
 
-tasks.test {
-    useJUnitPlatform()
-    testLogging {
-        events("passed", "skipped", "failed")
+tasks {
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events("passed", "skipped", "failed")
+        }
+    }
+    compileTestJava {
+        options.encoding = "UTF-8"
+    }
+    wrapper {
+        gradleVersion = "5.6.3"
     }
 }
 
-tasks.wrapper {
-    gradleVersion = "5.6.3"
-}
+
