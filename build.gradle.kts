@@ -2,7 +2,7 @@ plugins {
     `java`
 }
 
-defaultTasks("clean", "test")
+defaultTasks("test")
 
 repositories {
     jcenter()
@@ -21,6 +21,7 @@ tasks {
         testLogging {
             events("passed", "skipped", "failed")
         }
+        outputs.upToDateWhen { false }
     }
     compileTestJava {
         options.encoding = "UTF-8"
