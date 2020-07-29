@@ -33,7 +33,11 @@ public class SeleniumActions {
     }
 
     public void openURL(String applicationURL) {
-        webDriver.get(applicationURL);
+        try {
+            webDriver.get(applicationURL);
+        } catch (WebDriverException webDriverException) {
+            throw new WebDriverException(webDriverException);
+        }
     }
 
     public void enterTextInTextBox(LocatorObject locatorTextBox, String textToEnter) {
@@ -55,8 +59,7 @@ public class SeleniumActions {
     public void assertElementIsDisplayed(LocatorObject locatorObject) {
         try {
             assertThat(webDriver.findElement(locatorObject.elementValue).isDisplayed(), is(true));
-        } catch (
-                WebDriverException webDriverException) {
+        } catch (WebDriverException webDriverException) {
             throw new WebDriverException(webDriverException);
         }
     }
