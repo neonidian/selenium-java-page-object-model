@@ -1,5 +1,5 @@
 plugins {
-    `java`
+    java
 }
 
 defaultTasks("test")
@@ -11,7 +11,7 @@ repositories {
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.6.+")
     testImplementation("org.seleniumhq.selenium:selenium-java:4.0.+")
-    testImplementation("io.github.bonigarcia:webdrivermanager:3.8.+")
+    testImplementation("io.github.bonigarcia:webdrivermanager:4.1.+")
     testImplementation("org.hamcrest:hamcrest-all:1.3")
 }
 
@@ -27,6 +27,6 @@ tasks {
         options.encoding = "UTF-8"
     }
     wrapper {
-        gradleVersion = "6.3"
+        gradleVersion = "6.5.1"
     }
 }
