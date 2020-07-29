@@ -6,8 +6,8 @@ import se.ica.utilities.LocatorObject;
 
 public class HandlaPage extends PageBase {
 
-    private LocatorObject locatorHandlaPageHeaderLabel = new LocatorObject("//header//div/h3[contains(@class,'store-selector')]", LocatorObject.XPATH, "Handla page > Store selector header label");
-    private LocatorObject locatorZipCodeTextBox = new LocatorObject("store-selector-input", LocatorObject.ID, "Handla page > Store selector zip code");
+    private LocatorObject locatorHandlaPageHeaderLabel = new LocatorObject("//*[@id='navigation-bar-sticky']/div//h3", LocatorObject.XPATH, "Handla page > Store selector header label");
+    private LocatorObject locatorZipCodeTextBox = new LocatorObject("zipcode", LocatorObject.ID, "Handla page > Store selector zip code");
 
     private static final String HANDLA_ONLINE_PAGE_URL = "https://handla.ica.se";
 
