@@ -1,6 +1,7 @@
 package se.ica.framework;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
 import se.ica.utilities.LocatorObject;
 
 import java.util.concurrent.TimeUnit;
@@ -10,17 +11,25 @@ import static org.hamcrest.core.Is.is;
 
 public class SeleniumActions {
 
-    private WebDriver webDriver;
+    private final WebDriver webDriver;
 
     public SeleniumActions(WebDriver webDriver) {
-        this.webDriver = webDriver;
-        this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        this.webDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        this.webDriver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+        try {
+            this.webDriver = webDriver;
+            this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            this.webDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+            this.webDriver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+        } catch (WebDriverException webDriverException) {
+            throw new WebDriverException(webDriverException);
+        }
     }
 
     public void click(LocatorObject locatorObjectToClick) {
-        webDriver.findElement(locatorObjectToClick.elementValue).click();
+        try {
+            webDriver.findElement(locatorObjectToClick.elementValue).click();
+        } catch (WebDriverException webDriverException) {
+            throw new WebDriverException(webDriverException);
+        }
     }
 
     public void openURL(String applicationURL) {
@@ -28,14 +37,27 @@ public class SeleniumActions {
     }
 
     public void enterTextInTextBox(LocatorObject locatorTextBox, String textToEnter) {
-        webDriver.findElement(locatorTextBox.elementValue).sendKeys(textToEnter);
+        try {
+            webDriver.findElement(locatorTextBox.elementValue).sendKeys(textToEnter);
+        } catch (WebDriverException webDriverException) {
+            throw new WebDriverException(webDriverException);
+        }
     }
 
     public void assertTextPresentInElement(LocatorObject locatorObject, String expectedText) {
-        assertThat(webDriver.findElement(locatorObject.elementValue).getText(), is(expectedText));
+        try {
+            assertThat(webDriver.findElement(locatorObject.elementValue).getText(), is(expectedText));
+        } catch (WebDriverException webDriverException) {
+            throw new WebDriverException(webDriverException);
+        }
     }
 
     public void assertElementIsDisplayed(LocatorObject locatorObject) {
-        assertThat(webDriver.findElement(locatorObject.elementValue).isDisplayed(), is(true));
+        try {
+            assertThat(webDriver.findElement(locatorObject.elementValue).isDisplayed(), is(true));
+        } catch (
+                WebDriverException webDriverException) {
+            throw new WebDriverException(webDriverException);
+        }
     }
 }
