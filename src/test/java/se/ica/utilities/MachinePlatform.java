@@ -6,7 +6,7 @@ public class MachinePlatform {
 
     public static Platform platformOfHostMachine() {
         String platformFromJava = System.getProperty("os.name");
-        Platform platform = null;
+        Platform platform;
         if(platformFromJava.toLowerCase().contains("linux")) {
             platform = Platform.LINUX;
         }
