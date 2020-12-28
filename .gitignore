@@ -9,4 +9,3 @@ build
 
 # Project exclude paths
 /out/
-src/test/resources/drivers/
