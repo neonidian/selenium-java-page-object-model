@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import se.ica.utilities.LocatorObject;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -16,9 +16,9 @@ public class SeleniumActions {
     public SeleniumActions(WebDriver webDriver) {
         try {
             this.webDriver = webDriver;
-            this.webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-            this.webDriver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-            this.webDriver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
+            this.webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            this.webDriver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+            this.webDriver.manage().timeouts().setScriptTimeout(Duration.ofSeconds(10));
         } catch (WebDriverException webDriverException) {
             throw new WebDriverException(webDriverException);
         }

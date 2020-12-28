@@ -6,7 +6,7 @@ import se.ica.utilities.LocatorObject;
 
 public class HomePage extends PageBase {
 
-private LocatorObject locatorHandlaOnlineLink = new LocatorObject("//h2[text()='Handla online'][1]", LocatorObject.XPATH, "Home page > 'HANDLA ONLINE' Link");
+    private final LocatorObject locatorHandlaOnlineLink = new LocatorObject("//h2[text()='Handla online'][1]", LocatorObject.XPATH, "Home page > 'HANDLA ONLINE' Link");
 
     private static final String HOME_PAGE_URL = "https://www.ica.se";
 

@@ -11,7 +11,7 @@ public class BrowserOptions {
 
     private static final Platform platform = MachinePlatform.platformOfHostMachine();
 
-    FirefoxOptions customizefirefoxOptions() {
+    FirefoxOptions customizeFirefoxOptions() {
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.setAcceptInsecureCerts(true);
         firefoxOptions.setLogLevel(FirefoxDriverLogLevel.FATAL);

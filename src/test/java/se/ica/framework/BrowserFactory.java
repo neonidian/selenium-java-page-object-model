@@ -18,7 +18,7 @@ public class BrowserFactory {
         switch (browser.trim().toUpperCase()) {
             case "FIREFOX": {
                 WebDriverManager.firefoxdriver().setup();
-                webDriver = new FirefoxDriver(new BrowserOptions().customizefirefoxOptions());
+                webDriver = new FirefoxDriver(new BrowserOptions().customizeFirefoxOptions());
                 break;
             }
             case "CHROME": {

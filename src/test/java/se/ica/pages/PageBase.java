@@ -2,7 +2,6 @@ package se.ica.pages;
 
 import se.ica.framework.SeleniumActions;
 
-class PageBase {
+abstract class PageBase {
     SeleniumActions seleniumActions;
 }
-

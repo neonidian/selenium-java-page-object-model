@@ -10,7 +10,7 @@ import se.ica.pages.HomePage;
 import se.ica.pages.StoreSelectorPage;
 import se.ica.utilities.ReadProperties;
 
-public class TestBase {
+abstract public class TestBase {
 
     private WebDriver webDriver;
     private static BrowserFactory browserFactory;

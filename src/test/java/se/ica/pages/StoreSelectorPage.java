@@ -5,7 +5,7 @@ import se.ica.framework.SeleniumActions;
 import se.ica.utilities.LocatorObject;
 
 public class StoreSelectorPage extends PageBase {
-    private LocatorObject locatorStoreSelectorPopup = new LocatorObject("div.store-selector", LocatorObject.CSS, "Store selector page > Store selector modal");
+    private final LocatorObject locatorStoreSelectorPopup = new LocatorObject("div.store-selector", LocatorObject.CSS, "Store selector page > Store selector modal");
 
     public StoreSelectorPage(WebDriver webDriver) {
         seleniumActions = new SeleniumActions((webDriver));
