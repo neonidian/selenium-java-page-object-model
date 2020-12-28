@@ -9,3 +9,5 @@ build
 
 # Project exclude paths
 /out/
+
+.java-version
