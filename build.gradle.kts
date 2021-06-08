@@ -5,7 +5,7 @@ plugins {
 defaultTasks("test")
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -27,6 +27,6 @@ tasks {
         options.encoding = "UTF-8"
     }
     wrapper {
-        gradleVersion = "6.7.1"
+        gradleVersion = "7.0.2"
     }
 }
