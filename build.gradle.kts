@@ -11,7 +11,7 @@ repositories {
 dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.+")
     testImplementation("org.seleniumhq.selenium:selenium-java:4.0.+")
-    testImplementation("io.github.bonigarcia:webdrivermanager:4.2.+")
+    testImplementation("io.github.bonigarcia:webdrivermanager:4.4.+")
     testImplementation("org.hamcrest:hamcrest-all:1.3")
 }
 
